@@ -1,6 +1,6 @@
 # Arabidopsis_2cpab_omics
 
-This repository contains the analysis scripts used in the Master's Thesis (TFM) "Redox control of lipid catabolism at early stages of plant development", investigating the impact of 2-Cys peroxiredoxin (2-Cys Prx) deficiency on lipid catabolism in Arabidopsis thaliana seedlings, using complementary transcriptomic, proteomic and fatty acid composition analyses.
+This repository contains the analysis scripts used in the Master's Thesis (TFM) "Redox control of lipid catabolism at early stages of plant development", investigating the impact of 2-Cys peroxiredoxin (2-Cys Prx) deficiency on lipid catabolism in *Arabidopsis thaliana* seedlings, using complementary transcriptomic, proteomic and fatty acid composition analyses.
 
 Authors: Nardy Celeste Ayala-Pérez, Fernando Rodríguez Marín, Francisco Javier Cejudo, Juan Manuel Pérez-Ruiz, María Luisa Hernández.
 
@@ -14,7 +14,7 @@ The *2cpab* mutant, lacking both 2-Cys peroxiredoxin isoforms, was compared agai
 
 ## Repository structure and analytical pipeline
  
-The scripts used for the different analyses are organized into three main directories: "Transcriptomics", "Proteomics", and "FAMEs". The complete analytical pipeline developed for this Master's Thesis can be explored in the following sequential steps:
+The scripts used for the different analyses are organized into three main directories: "Transcriptomics", "Proteomics", and "Fatty_acid_composition". The complete analytical pipeline developed for this Master's Thesis can be explored in the following sequential steps:
 
 1. [RNA-seq data processing pipeline](Transcriptomics/Bash_code.md)
 2. [RNA-seq analysis: Differential gene expression (DESeq2 + limma-voom)](Transcriptomics/RNAseq_01_DEGAnalysis.R)
