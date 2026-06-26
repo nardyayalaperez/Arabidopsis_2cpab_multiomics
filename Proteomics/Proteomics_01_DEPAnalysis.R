@@ -191,9 +191,9 @@ write.csv(results_table, file = "tables/full_results_proteomics.csv")
 # DIFFERENTIALLY ABUNDANT PROTEINS (DEPs)
 #-------------------------------------------------------------------------------
 
-# DEPs are defined as |log2FC| > log2(1.5) and unadjusted P.Value < 0.05.
-# A stricter subset (adj.P.Val < 0.05) is identified separately below for
-# the supplementary table.
+# A broader threshold (|log2FC| > log2(1.5), unadjusted P.Value < 0.05) is
+# used to identify proteins with notable abundance changes, used for the
+# heatmap and detailed protein table below
 
 FC_threshold <- log2(1.5)
 pval_thresh  <- 0.05
@@ -210,6 +210,9 @@ cat("Down-regulated proteins:", length(down.proteins))
 cat("Total DEPs:", length(DEPs))
 
 # Proteins remaining significant after multiple-testing correction
+# Statistically significant DEPs after multiple-testing correction, used
+# for downstream functional enrichment analysis
+  
 up.proteins.sig   <- rownames(results_table[results_table$logFC > FC_threshold &
                                               results_table$adj.P.Val < 0.05, ])
 down.proteins.sig <- rownames(results_table[results_table$logFC < -FC_threshold &
